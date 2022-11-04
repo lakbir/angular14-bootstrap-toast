@@ -1,4 +1,4 @@
-const express = require('express');
+/* const express = require('express');
 const helmet = require('helmet');
 const path = require('path');
 const app = express();
@@ -18,5 +18,16 @@ app.use(
 app.use(express.static(__dirname + '/dist/angular-bootstrap-toast-service'));
 app.get('/*', function (req, res) {
   res.sendFile(path.join(__dirname + '/dist/angular-bootstrap-toast-service/index.html'));
+});
+app.listen(process.env.PORT || 8080); */
+
+let express = require('express');
+
+let app = express();
+
+app.use(express.static(__dirname + '/dist/angular-bootstrap-toast-service'));
+
+app.get('/*', (req, res) => {
+  res.sendFile(__dirname + '/dist/angular-bootstrap-toast-service/index.html');
 });
 app.listen(process.env.PORT || 8080);
