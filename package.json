@@ -24,7 +24,7 @@
     "lint:fix": "ng lint --fix",
     "prettier": "prettier \"**/*.(ts|scss|html|js|json)\" --check",
     "prettier:fix": "prettier \"**/*.(ts|scss|html|js|json)\" --write",
-    "heroku-postbuild": "ng build --prod",
+    "heroku-postbuild": "ng build",
     "postinstall": "husky install",
     "precommit": "lint-staged"
   },
